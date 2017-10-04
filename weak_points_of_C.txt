@@ -1,25 +1,7 @@
+LOOPS :
+1. “break” and “continue” can be used in “for”, “while” and “do-while” loop body. But only “break” can be used in “switch” body.
+
+2.
+
 1. The function fun() receives an array parameter arr[] and tries to find out number of elements in arr[] using sizeof operator.
    In C, array parameters are treated as pointers. So the expression sizeof(arr)/sizeof(arr[0]) becomes sizeof(int *)/sizeof(int) which      results in 1
-
-#include<stdio.h>
-void fun(int arr[], size_t arr_size)  
-{
-  int i;   
-  for (i = 0; i < arr_size; i++) 
-  {  
-    arr[i] = i;  
-  }
-}
- 
-int main()
-{
-  int i;  
-  int arr[4] = {0, 0 ,0, 0};
-  fun(arr, 4);
-   
-  for(i = 0; i < sizeof(arr)/sizeof(arr[0]); i++)
-    printf(" %d ", arr[i]);
- 
-  getchar();  
-  return 0;
-}
